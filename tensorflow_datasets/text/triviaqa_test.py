@@ -31,8 +31,5 @@ class TriviaqaTest(testing.DatasetBuilderTestCase):
   }
 
 
-class TriviaqaS3Test(TriviaqaTest):
-  VERSION = "experimental_latest"
-
 if __name__ == "__main__":
   testing.test_main()

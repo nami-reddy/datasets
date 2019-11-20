@@ -36,27 +36,24 @@ tf.compat.v1.enable_eager_execution()
 
 class DummyTFRecordBuilder(dataset_builder.GeneratorBasedBuilder):
 
-  VERSION = utils.Version("0.0.0", experiments={utils.Experiment.S3: False})
+  VERSION = utils.Version("0.0.0")
 
   def _split_generators(self, dl_manager):
     return [
         splits.SplitGenerator(
             name=splits.Split.TRAIN,
-            num_shards=2,
             gen_kwargs={"range_": range(20)}),
         splits.SplitGenerator(
             name=splits.Split.VALIDATION,
-            num_shards=1,
             gen_kwargs={"range_": range(20, 30)}),
         splits.SplitGenerator(
             name=splits.Split.TEST,
-            num_shards=1,
             gen_kwargs={"range_": range(30, 40)}),
     ]
 
   def _generate_examples(self, range_):
     for i in range_:
-      yield {
+      yield i, {
           "x": i,
           "y": np.array([-i]).astype(np.int64)[0],
           "z": tf.compat.as_text(str(i))

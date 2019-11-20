@@ -165,7 +165,6 @@ class Groove(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(  # pylint: disable=g-complex-comprehension
             name=split,
-            num_shards=10 if split == "train" else 1,
             gen_kwargs={"rows": split_rows, "data_dir": data_dir})
         for split, split_rows in rows.items()]
 

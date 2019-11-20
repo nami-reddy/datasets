@@ -93,12 +93,8 @@ class CnnDailymailConfig(tfds.core.BuilderConfig):
     # 0.0.2: Initial version.
     super(CnnDailymailConfig, self).__init__(
         version=tfds.core.Version(
-            '0.0.2', experiments={tfds.core.Experiment.S3: False}),
-        supported_versions=[
-            tfds.core.Version(
-                '1.0.0',
-                'New split API (https://tensorflow.org/datasets/splits)'),
-        ],
+            '1.0.0',
+            'New split API (https://tensorflow.org/datasets/splits)'),
         **kwargs)
     self.text_encoder_config = (
         text_encoder_config or tfds.features.text.TextEncoderConfig())
@@ -274,17 +270,14 @@ class CnnDailymail(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(
             name=tfds.Split.TRAIN,
-            num_shards=100,
             gen_kwargs={'files': train_files}),
 
         tfds.core.SplitGenerator(
             name=tfds.Split.VALIDATION,
-            num_shards=10,
             gen_kwargs={'files': _subset_filenames(dl_paths,
                                                    tfds.Split.VALIDATION)}),
         tfds.core.SplitGenerator(
             name=tfds.Split.TEST,
-            num_shards=10,
             gen_kwargs={'files': _subset_filenames(dl_paths,
                                                    tfds.Split.TEST)})
     ]

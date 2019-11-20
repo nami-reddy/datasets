@@ -79,7 +79,6 @@ class MovingMnist(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(
             name=tfds.Split.TEST,
-            num_shards=5,
             gen_kwargs=dict(data_path=data_path)),
     ]
 

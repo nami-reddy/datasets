@@ -209,19 +209,16 @@ class Librispeech(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(
             name=tfds.Split.TRAIN,
-            num_shards=100,
             gen_kwargs={
                 "dirs": extracted_dirs[tfds.Split.TRAIN],
             }),
         tfds.core.SplitGenerator(
             name=tfds.Split.VALIDATION,
-            num_shards=10,
             gen_kwargs={
                 "dirs": extracted_dirs[tfds.Split.VALIDATION],
             }),
         tfds.core.SplitGenerator(
             name=tfds.Split.TEST,
-            num_shards=10,
             gen_kwargs={
                 "dirs": extracted_dirs[tfds.Split.TEST],
             }),

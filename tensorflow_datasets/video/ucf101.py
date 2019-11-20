@@ -164,7 +164,6 @@ class Ucf101(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(
             name=tfds.Split.TRAIN,
-            num_shards=10,
             gen_kwargs={
                 'videos_dir': downloaded_urls['videos'],
                 'splits_dir': downloaded_urls['splits'],
@@ -173,7 +172,6 @@ class Ucf101(tfds.core.GeneratorBasedBuilder):
             }),
         tfds.core.SplitGenerator(
             name=tfds.Split.TEST,
-            num_shards=10,
             gen_kwargs={
                 'videos_dir': downloaded_urls['videos'],
                 'splits_dir': downloaded_urls['splits'],

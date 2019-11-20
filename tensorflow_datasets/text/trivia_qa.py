@@ -79,12 +79,8 @@ class TriviaQA(tfds.core.GeneratorBasedBuilder):
   It containss over 650K question-answer-evidence triples.
   """
 
-  VERSION = tfds.core.Version("0.1.0",
-                              experiments={tfds.core.Experiment.S3: False})
-  SUPPORTED_VERSIONS = [
-      tfds.core.Version(
-          "1.0.0", "New split API (https://tensorflow.org/datasets/splits)"),
-  ]
+  VERSION = tfds.core.Version(
+      "1.0.0", "New split API (https://tensorflow.org/datasets/splits)")
 
   def _info(self):
     return tfds.core.DatasetInfo(
@@ -155,13 +151,11 @@ class TriviaQA(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(
             name=tfds.Split.TRAIN,
-            num_shards=100,
             gen_kwargs={"files": train_files,
                         "web_dir": web_evidence_dir,
                         "wiki_dir": wiki_evidence_dir}),
         tfds.core.SplitGenerator(
             name=tfds.Split.TEST,
-            num_shards=10,
             gen_kwargs={"files": test_files,
                         "web_dir": web_evidence_dir,
                         "wiki_dir": wiki_evidence_dir}),

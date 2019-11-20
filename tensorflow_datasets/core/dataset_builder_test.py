@@ -99,7 +99,6 @@ class InvalidSplitDataset(DummyDatasetWithConfigs):
     return [
         splits_lib.SplitGenerator(
             name=splits_lib.Split.ALL,  # Error: ALL cannot be used as Split key
-            num_shards=5,
         )
     ]
 
@@ -169,7 +168,7 @@ class DatasetBuilderTest(testing.TestCase):
                "mnist-test.tfrecord-00000-of-00001",
                "mnist-train.counts.txt-00000-of-00001"] +
               ["mnist-train.tfrecord-0000%d-of-00010" % i for i in range(10)]),
-          set(tf.io.gfile.listdir(os.path.join(tmp_dir, "mnist/1.0.0"))))
+          set(tf.io.gfile.listdir(os.path.join(tmp_dir, "mnist/3.0.0"))))
 
       self.assertEqual(set(info.splits.keys()), set(["train", "test"]))
 
@@ -316,7 +315,7 @@ class BuilderRestoreGcsTest(testing.TestCase):
     def load_mnist_dataset_info(self):
       mnist_info_path = os.path.join(
           utils.tfds_dir(),
-          "testing/test_data/dataset_info/mnist/1.0.0",
+          "testing/test_data/dataset_info/mnist/3.0.0",
       )
       mnist_info_path = os.path.normpath(mnist_info_path)
       self.read_from_directory(mnist_info_path)

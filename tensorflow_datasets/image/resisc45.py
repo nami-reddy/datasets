@@ -95,7 +95,6 @@ class Resisc45(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(
             name=tfds.Split.TRAIN,
-            num_shards=1,
             gen_kwargs={'path': path},
         ),
     ]

@@ -61,12 +61,8 @@ class DiabeticRetinopathyDetectionConfig(tfds.core.BuilderConfig):
     """
     super(DiabeticRetinopathyDetectionConfig, self).__init__(
         version=tfds.core.Version(
-            version, experiments={tfds.core.Experiment.S3: False}),
-        supported_versions=[
-            tfds.core.Version(
-                "3.0.0",
-                "New split API (https://tensorflow.org/datasets/splits)"),
-        ],
+            "3.0.0",
+            "New split API (https://tensorflow.org/datasets/splits)"),
         **kwargs)
     self._target_pixels = target_pixels
 
@@ -127,14 +123,12 @@ class DiabeticRetinopathyDetection(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(
             name="sample",  # 10 images, to do quicktests using dataset.
-            num_shards=1,
             gen_kwargs={
                 "images_dir_path": os.path.join(path, "sample"),
             },
         ),
         tfds.core.SplitGenerator(
             name="train",
-            num_shards=100,
             gen_kwargs={
                 "images_dir_path": os.path.join(path, "train"),
                 "csv_path": os.path.join(path, "trainLabels.csv"),
@@ -145,7 +139,6 @@ class DiabeticRetinopathyDetection(tfds.core.GeneratorBasedBuilder):
         ),
         tfds.core.SplitGenerator(
             name="validation",
-            num_shards=100,
             gen_kwargs={
                 "images_dir_path": os.path.join(path, "test"),
                 "csv_path": test_labels_path,
@@ -156,7 +149,6 @@ class DiabeticRetinopathyDetection(tfds.core.GeneratorBasedBuilder):
         ),
         tfds.core.SplitGenerator(
             name="test",
-            num_shards=100,
             gen_kwargs={
                 "images_dir_path": os.path.join(path, "test"),
                 "csv_path": test_labels_path,

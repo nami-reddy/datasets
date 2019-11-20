@@ -91,7 +91,6 @@ class PetFinder(tfds.core.GeneratorBasedBuilder):
     return [
         tfds.core.SplitGenerator(
             name=tfds.Split.TRAIN,
-            num_shards=10,
             gen_kwargs={
                 "csv_name": "train.csv",
                 "csv_paths": dl_paths["train"],
@@ -100,7 +99,6 @@ class PetFinder(tfds.core.GeneratorBasedBuilder):
         ),
         tfds.core.SplitGenerator(
             name=tfds.Split.TEST,
-            num_shards=10,
             gen_kwargs={
                 "csv_name": "test.csv",
                 "csv_paths": dl_paths["test"],
