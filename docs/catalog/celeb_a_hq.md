@@ -2,13 +2,15 @@
   <div itemscope itemprop="includedInDataCatalog" itemtype="http://schema.org/DataCatalog">
     <meta itemprop="name" content="TensorFlow Datasets" />
   </div>
+
   <meta itemprop="name" content="celeb_a_hq" />
   <meta itemprop="description" content="High-quality version of the CELEBA&#10;dataset, consisting of 30000 images in 1024 x 1024 resolution.&#10;&#10;WARNING: This dataset currently requires you to prepare images on your own.&#10;&#10;&#10;To use this dataset:&#10;&#10;```python&#10;import tensorflow_datasets as tfds&#10;&#10;ds = tfds.load('celeb_a_hq', split='train')&#10;for ex in ds.take(4):&#10;  print(ex)&#10;```&#10;&#10;See [the guide](https://www.tensorflow.org/datasets/overview) for more&#10;informations on [tensorflow_datasets](https://www.tensorflow.org/datasets).&#10;&#10;" />
   <meta itemprop="url" content="https://www.tensorflow.org/datasets/catalog/celeb_a_hq" />
   <meta itemprop="sameAs" content="https://github.com/tkarras/progressive_growing_of_gans" />
   <meta itemprop="citation" content="@article{DBLP:journals/corr/abs-1710-10196,&#10;  author    = {Tero Karras and&#10;               Timo Aila and&#10;               Samuli Laine and&#10;               Jaakko Lehtinen},&#10;  title     = {Progressive Growing of GANs for Improved Quality, Stability, and Variation},&#10;  journal   = {CoRR},&#10;  volume    = {abs/1710.10196},&#10;  year      = {2017},&#10;  url       = {http://arxiv.org/abs/1710.10196},&#10;  archivePrefix = {arXiv},&#10;  eprint    = {1710.10196},&#10;  timestamp = {Mon, 13 Aug 2018 16:46:42 +0200},&#10;  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1710-10196},&#10;  bibsource = {dblp computer science bibliography, https://dblp.org}&#10;}&#10;" />
 </div>
-# `celeb_a_hq`
+
+# `celeb_a_hq` (Manual download)
 
 High-quality version of the CELEBA dataset, consisting of 30000 images in 1024 x
 1024 resolution.
@@ -54,6 +56,11 @@ Versions:
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
 
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
+
 ### Statistics
 
 Split | Examples
@@ -80,6 +87,11 @@ Versions:
 
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
+
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
 
 ### Statistics
 
@@ -108,6 +120,11 @@ Versions:
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
 
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
+
 ### Statistics
 
 Split | Examples
@@ -134,6 +151,11 @@ Versions:
 
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
+
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
 
 ### Statistics
 
@@ -162,6 +184,11 @@ Versions:
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
 
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
+
 ### Statistics
 
 Split | Examples
@@ -188,6 +215,11 @@ Versions:
 
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
+
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
 
 ### Statistics
 
@@ -216,6 +248,11 @@ Versions:
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
 
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
+
 ### Statistics
 
 Split | Examples
@@ -242,6 +279,11 @@ Versions:
 
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
+
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
 
 ### Statistics
 
@@ -270,6 +312,11 @@ Versions:
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
 
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
+
 ### Statistics
 
 Split | Examples
@@ -297,6 +344,11 @@ Versions:
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
 
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
+
 ### Statistics
 
 Split | Examples
@@ -323,6 +375,11 @@ Versions:
 
 *   **`0.1.0`** (default):
 *   `2.0.0`: New split API (https://tensorflow.org/datasets/splits)
+
+WARNING: This dataset requires you to download the source data manually:
+manual_dir should contain multiple tar files with images (data2x2.tar,
+data4x4.tar .. data1024x1024.tar). Detailed instructions are here:
+https://github.com/tkarras/progressive_growing_of_gans#preparing-datasets-for-training
 
 ### Statistics
 
